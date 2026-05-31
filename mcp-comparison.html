@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twenty MCP Comparison - Our Server vs Native</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0f;color:#e0e0e0;padding:40px 20px}
+.container{max-width:900px;margin:0 auto}
+h1{font-size:2em;margin-bottom:10px;background:linear-gradient(135deg,#00d4ff,#7b2ff7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+table{width:100%;border-collapse:collapse;margin:30px 0}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid #2a2a3a}
+th{background:#1a1a2e;color:#00d4ff;font-weight:bold}
+td{color:#bbb}
+tr:hover{background:#14141f}
+.check{color:#00ff88} .cross{color:#ff4444} .warn{color:#ffd700}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.75em;font-weight:bold}
+.bg-green{background:#00ff8822;color:#00ff88;border:1px solid#00ff88}
+.bg-red{background:#ff444422;color:#ff4444;border:1px solid#ff4444}
+.bg-gold{background:#ffd70022;color:#ffd700;border:1px solid#ffd700}
+.issues-box{background:#1a1a2e;border:1px solid #ff4444;border-radius:10px;padding:20px;margin:20px 0}
+.issues-box h3{color:#ff4444}
+.issues-box li{margin:8px 0;color:#ccc}
+.cta{display:inline-block;background:linear-gradient(135deg,#00d4ff,#7b2ff7);color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;margin:20px 0}
+.cta:hover{transform:scale(1.05)}
+ul{margin:10px 0;padding-left:20px}
+li{margin:5px 0}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>🔌 Twenty CRM MCP — The Better Alternative</h1>
+    <p style="color:#888;font-size:1.1em;margin:10px 0 20px;">Twenty has MCP built-in, but users are reporting <strong style="color:#ff6b6b;">active bugs</strong>. Our server works, stays focused, and costs a fraction.</p>
+
+    <div class="issues-box">
+        <h3>⚠️ Known Issues with Twenty's Native MCP</h3>
+        <p style="color:#888;font-size:0.85em;margin:5px 0 10px">Sourced from Twenty's GitHub issues (real user reports)</p>
+        <ul>
+            <li>🔴 <strong>OAuth consent modal fails</strong> — doesn't reopen after sign-in (#20535)</li>
+            <li>🔴 <strong>draft_email depends on connectedAccountId</strong> — returns 0 records for connected accounts (#20407)</li>
+            <li>🔴 <strong>create_note_target fails</strong> — "Object cannot be created by workflow" (#20595)</li>
+            <li>🟡 <strong>MCP Server doesn't expose custom fields</strong> on standard objects (#20194)</li>
+            <li>🟡 <strong>Log spam</strong> — uncompiled message warnings flooding logs (#19860)</li>
+            <li>🟡 <strong>Can't connect AI via MCP</strong> — connection issues (#19468)</li>
+        </ul>
+    </div>
+
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Twenty's Native MCP</th>
+            <th>🟣 Our MCP Server</th>
+        </tr>
+        <tr>
+            <td>Setup time</td>
+            <td><span class="warn">⚠️ 10-15 min (OAuth flow)</span></td>
+            <td><span class="check">✅ 2 min (API key only)</span></td>
+        </tr>
+        <tr>
+            <td>Auth complexity</td>
+            <td><span class="cross">❌ OAuth 2.0 flow</span></td>
+            <td><span class="check">✅ API key (export TWENTY_API_KEY=***)</span></td>
+        </tr>
+        <tr>
+            <td>Custom fields support</td>
+            <td><span class="cross">❌ Buggy / incomplete</span></td>
+            <td><span class="check">✅ Auto field discovery</span></td>
+        </tr>
+        <tr>
+            <td>Pricing</td>
+            <td><span class="warn">⚠️ Enterprise only</span></td>
+            <td><span class="check">✅ $49 commercial (free MIT)</span></td>
+        </tr>
+        <tr>
+            <td>Tools count</td>
+            <td><span class="warn">⚠️ ~8 (some broken)</span></td>
+            <td><span class="check">✅ 8 (all tested & working)</span></td>
+        </tr>
+        <tr>
+            <td>Self-hosted Twenty</td>
+            <td><span class="warn">⚠️ Complex setup</span></td>
+            <td><span class="check">✅ Just set TWENTY_API_URL</span></td>
+        </tr>
+        <tr>
+            <td>Documentation</td>
+            <td><span class="warn">⚠️ Scattered</span></td>
+            <td><span class="check">✅ 1 README, examples included</span></td>
+        </tr>
+        <tr>
+            <td>Support</td>
+            <td><span class="warn">⚠️ GitHub issues</span></td>
+            <td><span class="check">✅ Email + priority for commercial</span></td>
+        </tr>
+    </table>
+
+    <h2 style="margin:30px 0 10px;color:#00ff88">🤷 Why Not Both?</h2>
+    <p style="color:#aaa">Use our server for stable, reliable operations. Keep Twenty's native for experimental features. Many teams run both — our server handles the CRUD heavy lifting.</p>
+
+    <div style="text-align:center;margin:30px 0">
+        <a href="https://github.com/nandini-vk-w/twenty-mcp-server" class="cta">📦 Try Free (MIT)</a>
+        <a href="buy.html" style="display:inline-block;background:linear-gradient(135deg,#00ff88,#00cc66);color:#000;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:bold;margin:20px 10px">🛒 Buy $49 Commercial License</a>
+    </div>
+</div>
+</body>
+</html>
