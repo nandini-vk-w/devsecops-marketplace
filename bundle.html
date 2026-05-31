@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSecOps Bundle — Twenty MCP + Sentinel-RS EDR | Nandini VK</title>
+    <meta name="description" content="Get both Twenty MCP Server and Sentinel-RS EDR in one bundle. Save $9. One-time purchase of $69.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0b0d12;
+            --surface: #12151c;
+            --surface-2: #1a1e28;
+            --border: #262b38;
+            --text: #e4e6ef;
+            --text-muted: #8b8fa3;
+            --accent: #6c63ff;
+            --accent-hover: #7f78ff;
+            --green: #22c55e;
+            --gold: #f59e0b;
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 18px 0;
+            background: rgba(11,13,18,.85);
+            backdrop-filter: blur(12px);
+            position: sticky; top: 0; z-index: 100;
+        }
+        header .container { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-weight: 800; font-size: 1.25rem; letter-spacing: -.5px; }
+        .logo span { color: var(--accent); }
+        nav a {
+            color: var(--text-muted); text-decoration: none; font-size: .9rem; font-weight: 500;
+            margin-left: 24px; transition: color .2s;
+        }
+        nav a:hover { color: var(--text); }
+
+        .hero {
+            padding: 80px 0 40px; text-align: center;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(108,99,255,.15), rgba(245,158,11,.1));
+            border: 1px solid rgba(108,99,255,.3);
+            border-radius: 999px; padding: 6px 20px;
+            font-size: .8rem; font-weight: 600; color: var(--gold);
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 900;
+            letter-spacing: -1.5px; line-height: 1.1;
+        }
+        .hero h1 .gold { color: var(--gold); }
+        .hero h1 .purple { color: var(--accent); }
+        .hero p {
+            color: var(--text-muted); font-size: 1.1rem;
+            max-width: 600px; margin: 20px auto 0; 
+        }
+        .hero .price-hero {
+            margin-top: 28px; font-size: 3.5rem; font-weight: 900; color: var(--gold);
+        }
+        .hero .price-hero small {
+            font-size: 1rem; font-weight: 400; color: var(--text-muted);
+        }
+        .hero .save-badge {
+            margin-top: 8px; color: var(--green); font-weight: 600; font-size: 1rem;
+        }
+        .hero .cta-group { margin-top: 32px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-block; padding: 14px 32px; border-radius: var(--radius-sm);
+            font-weight: 600; font-size: 1rem; text-decoration: none; cursor: pointer;
+            border: none; transition: background .2s, transform .1s;
+        }
+        .btn:active { transform: scale(.97); }
+        .btn-gold { background: var(--gold); color: #000; }
+        .btn-gold:hover { background: #d97706; }
+        .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+        .btn-outline:hover { border-color: var(--text-muted); }
+        .btn-primary { background: var(--accent); color: #fff; }
+        .btn-primary:hover { background: var(--accent-hover); }
+
+        /* Comparison */
+        .comparison { padding: 60px 0; }
+        .comparison h2 { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 32px; }
+        .compare-table { width: 100%; border-collapse: collapse; }
+        .compare-table th, .compare-table td {
+            padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--border);
+            font-size: .9rem;
+        }
+        .compare-table th { 
+            background: var(--surface); font-weight: 600; color: var(--text-muted);
+            font-size: .8rem; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .compare-table td:first-child { font-weight: 500; }
+        .compare-table td:nth-child(2),
+        .compare-table td:nth-child(3) { text-align: center; }
+        .compare-table .yes { color: var(--green); }
+        .compare-table .no { color: #555; }
+        .compare-table .bundle-row td { background: rgba(108,99,255,.05); }
+        .compare-table .price-cell { font-weight: 700; }
+        .compare-table .price-cell.gold { color: var(--gold); }
+
+        @media (max-width: 640px) {
+            .compare-table th, .compare-table td { padding: 10px 12px; font-size: .8rem; }
+        }
+
+        /* Features */
+        .features-section { padding: 60px 0; }
+        .features-section h2 { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 40px; }
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        @media (max-width: 768px) { .features-grid { grid-template-columns: 1fr; } }
+        .feature-card {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 24px;
+        }
+        .feature-card h4 { font-size: 1.05rem; margin-bottom: 8px; }
+        .feature-card h4 .icon { margin-right: 8px; }
+        .feature-card p { font-size: .88rem; color: var(--text-muted); }
+
+        /* Included */
+        .included { padding: 60px 0; }
+        .included h2 { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 40px; }
+        .product-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        @media (max-width: 768px) { .product-cards { grid-template-columns: 1fr; } }
+        .product-card {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 28px;
+        }
+        .product-card .icon { font-size: 2rem; margin-bottom: 12px; }
+        .product-card h3 { font-size: 1.2rem; font-weight: 700; }
+        .product-card .tag {
+            display: inline-block; font-size: .72rem; text-transform: uppercase;
+            letter-spacing: 1px; padding: 3px 10px; border-radius: 999px;
+            background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border);
+            margin: 8px 0 12px;
+        }
+        .product-card .tag.free { border-color: var(--green); color: var(--green); }
+        .product-card ul { list-style: none; margin-top: 12px; }
+        .product-card ul li {
+            font-size: .85rem; padding: 5px 0; color: var(--text-muted);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .product-card ul li::before { content: "✓"; color: var(--green); font-weight: 700; }
+
+        /* Payment */
+        .payment-section { padding: 60px 0; }
+        .payment-section h2 { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
+        .payment-section .subtitle { text-align: center; color: var(--text-muted); margin-bottom: 40px; }
+        .payment-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 700px; margin: 0 auto; }
+        @media (max-width: 768px) { .payment-cards { grid-template-columns: 1fr; } }
+        .payment-card {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 24px;
+        }
+        .payment-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+        .payment-card .upi-id {
+            background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm);
+            padding: 10px 14px; font-family: monospace; font-size: 1rem;
+            user-select: all; cursor: pointer; margin: 12px 0;
+        }
+        .payment-card .row { display: flex; justify-content: space-between; padding: 6px 0; font-size: .88rem; border-bottom: 1px solid var(--border); }
+        .payment-card .row:last-child { border-bottom: none; }
+        .payment-card .row .label { color: var(--text-muted); }
+        .contact-note {
+            background: var(--surface-2); border-radius: var(--radius-sm); padding: 16px;
+            font-size: .85rem; color: var(--text-muted); text-align: center; margin-top: 24px;
+            max-width: 700px; margin-left: auto; margin-right: auto;
+        }
+
+        .faq { padding: 60px 0; }
+        .faq h2 { text-align: center; font-size: 1.6rem; font-weight: 700; margin-bottom: 32px; }
+        .faq-grid { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+        .faq-item {
+            background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+            padding: 20px;
+        }
+        .faq-item h4 { font-size: .95rem; font-weight: 600; margin-bottom: 6px; }
+        .faq-item p { font-size: .88rem; color: var(--text-muted); }
+
+        footer {
+            border-top: 1px solid var(--border); padding: 32px 0; text-align: center;
+            color: var(--text-muted); font-size: .85rem;
+        }
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--text); }
+
+        .toast {
+            position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+            background: var(--surface); border: 1px solid var(--green); border-radius: var(--radius-sm);
+            padding: 10px 20px; font-size: .85rem; color: var(--green);
+            opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 999;
+        }
+        .toast.show { opacity: 1; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">Nandini<span>VK</span></div>
+        <nav>
+            <a href="#included">What's Included</a>
+            <a href="#compare">Compare</a>
+            <a href="#payment">Buy</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="badge">✦ Best Value — Save $9</div>
+        <h1>The <span class="purple">DevSecOps</span><br><span class="gold">Tool Bundle</span></h1>
+        <p>Two production-grade tools at one unbeatable price. AI infrastructure + endpoint security, packaged together.</p>
+        <div class="price-hero">
+            $69 <small>USD</small>
+        </div>
+        <div class="save-badge">Save $9 vs. buying separately ($49 + $29 = $78)</div>
+        <div class="cta-group">
+            <a href="#payment" class="btn btn-gold">Buy Bundle — $69</a>
+            <a href="#compare" class="btn btn-outline">Compare Options</a>
+        </div>
+    </div>
+</section>
+
+<section id="included" class="included">
+    <div class="container">
+        <h2>What's in the Bundle</h2>
+        <div class="product-cards">
+            <div class="product-card">
+                <div class="icon">🔌</div>
+                <h3>Twenty MCP Server</h3>
+                <div class="tag free">Personal: Free</div>
+                <p style="font-size:.88rem;color:var(--text-muted);">Model Context Protocol server connecting AI assistants to your tools.</p>
+                <ul>
+                    <li>File system read/write/search</li>
+                    <li>Shell command execution sandbox</li>
+                    <li>PostgreSQL &amp; SQLite database tools</li>
+                    <li>Web fetch &amp; content extraction</li>
+                    <li>MCP stdio &amp; SSE transport</li>
+                    <li>Configurable rate limits &amp; permissions</li>
+                </ul>
+            </div>
+            <div class="product-card">
+                <div class="icon">🛡️</div>
+                <h3>Sentinel-RS EDR</h3>
+                <div class="tag free">Personal: Free</div>
+                <p style="font-size:.88rem;color:var(--text-muted);">Lightweight Rust-based EDR agent — real-time monitoring and threat detection.</p>
+                <ul>
+                    <li>Real-time process &amp; network monitoring</li>
+                    <li>File integrity monitoring (FIM)</li>
+                    <li>YARA-based threat detection engine</li>
+                    <li>eBPF syscall auditing (Linux)</li>
+                    <li>Centralized alert aggregation</li>
+                    <li>&lt; 5 MB binary, ~20 MB RAM idle</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="compare" class="comparison">
+    <div class="container">
+        <h2>Compare Plans</h2>
+        <div style="overflow-x:auto;">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Free (Personal)</th>
+                        <th>Buy Separately</th>
+                        <th style="color:var(--gold);">Bundle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Twenty MCP Server</td>
+                        <td class="yes">✓</td>
+                        <td class="yes">✓</td>
+                        <td class="yes" style="background:rgba(245,158,11,.05);">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Sentinel-RS EDR</td>
+                        <td class="yes">✓</td>
+                        <td class="yes">✓</td>
+                        <td class="yes" style="background:rgba(245,158,11,.05);">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Commercial deployment</td>
+                        <td class="no">✗</td>
+                        <td class="yes">✓</td>
+                        <td class="yes" style="background:rgba(245,158,11,.05);">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Unlimited servers/instances</td>
+                        <td class="no">Up to 3</td>
+                        <td class="yes">✓</td>
+                        <td class="yes" style="background:rgba(245,158,11,.05);">✓</td>
+                    </tr>
+                    <tr>
+                        <td>Priority email support</td>
+                        <td class="no">✗</td>
+                        <td class="yes">✓</td>
+                        <td class="yes" style="background:rgba(245,158,11,.05);">✓</td>
+                    </tr>
+                    <tr>
+                        <td>License key activation</td>
+                        <td class="no">Not needed</td>
+                        <td class="yes">✓</td>
+                        <td class="yes" style="background:rgba(245,158,11,.05);">✓</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Price</strong></td>
+                        <td><strong>Free</strong></td>
+                        <td><strong>$78</strong></td>
+                        <td style="background:rgba(245,158,11,.08);"><strong class="gold" style="color:var(--gold);">$69</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Savings</strong></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td style="background:rgba(245,158,11,.08);color:var(--green);"><strong>Save $9</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section id="payment" class="payment-section">
+    <div class="container">
+        <h2>Purchase the Bundle</h2>
+        <p class="subtitle">One-time payment. No subscription.</p>
+        <div class="payment-cards">
+            <div class="payment-card">
+                <h4>🇮🇳 UPI (India)</h4>
+                <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:8px;">Send to:</p>
+                <div class="upi-id" onclick="copyUPI()">7852034945@paytm</div>
+                <p style="font-size:.78rem;color:var(--text-muted);text-align:center;">Tap to copy</p>
+            </div>
+            <div class="payment-card">
+                <h4>🏦 Bank Transfer</h4>
+                <div class="row"><span class="label">Account</span><span>7626002100006961</span></div>
+                <div class="row"><span class="label">IFSC</span><span>PUNB0762600</span></div>
+                <div class="row"><span class="label">Bank</span><span>PNB, Pal Road, Jodhpur</span></div>
+            </div>
+        </div>
+        <div class="contact-note">
+            <strong>📧 After payment, email receipt to</strong>
+            <a href="mailto:licenses@nandini-vk.dev" style="color:var(--accent);text-decoration:none;">licenses@nandini-vk.dev</a>
+            <span style="display:block;margin-top:4px;">Include your GitHub username. License keys delivered within 24 hours.</span>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>What's the difference between Personal and Commercial licenses?</h4>
+                <p>Personal (MIT) is free for individual developers and non-commercial use. A Commercial license is required for any business, organization, or revenue-generating deployment.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is this a one-time payment or subscription?</h4>
+                <p>One-time payment. Forever. You get updates, support, and all future versions within the same major version line.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I use the bundle on multiple servers?</h4>
+                <p>Yes. The commercial bundle covers unlimited deployments of both products within your organization.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I get my license key after payment?</h4>
+                <p>Email your payment confirmation to licenses@nandini-vk.dev with your GitHub username. Keys are sent within 24 hours (usually same day).</p>
+            </div>
+            <div class="faq-item">
+                <h4>What if I already bought one product separately?</h4>
+                <p>Email us at licenses@nandini-vk.dev. We can provide a pro-rated bundle upgrade.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is there a refund policy?</h4>
+                <p>Yes. 14-day money-back guarantee. If the software doesn't meet your needs, email us for a full refund.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>Nandini VK · <a href="https://github.com/nandini-vk-w" target="_blank">GitHub</a> · <a href="../sales-site/">Main Sales Page</a> · Built with ❤️ in India</p>
+    </div>
+</footer>
+
+<div id="toast" class="toast">📋 UPI ID copied!</div>
+<script>
+function copyUPI() {
+    const upi = '7852034945@paytm';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(upi).then(showToast).catch(() => fallbackCopy(upi));
+    } else {
+        fallbackCopy(upi);
+    }
+}
+function fallbackCopy(text) {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); showToast(); } catch(e) {}
+    document.body.removeChild(ta);
+}
+function showToast() {
+    const t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+}
+</script>
+</body>
+</html>
