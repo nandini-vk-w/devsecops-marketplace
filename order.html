@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - DevSecOps Marketplace</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e0e0e0; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.2em; margin-bottom: 10px; background: linear-gradient(135deg, #00d4ff, #7b2ff7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { color: #00d4ff; margin: 30px 0 15px; }
+        .card { background: #14141f; border: 1px solid #2a2a3a; border-radius: 12px; padding: 24px; margin: 20px 0; }
+        .price { font-size: 2em; color: #00ff88; font-weight: bold; }
+        .old-price { text-decoration: line-through; color: #666; font-size: 1.2em; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #00d4ff, #7b2ff7); color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; margin: 10px 5px; border: none; cursor: pointer; font-size: 1em; transition: transform 0.2s; }
+        .btn:hover { transform: scale(1.05); }
+        .btn-green { background: linear-gradient(135deg, #00ff88, #00cc66); color: #000; }
+        .step { background: #1a1a2e; border-left: 3px solid #00d4ff; padding: 15px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+        .step h3 { color: #00d4ff; margin-bottom: 5px; }
+        .bank-details { background: #1a1a2e; padding: 20px; border-radius: 8px; margin: 15px 0; font-family: monospace; }
+        .bank-details div { margin: 5px 0; }
+        .label { color: #888; }
+        .value { color: #fff; font-size: 1.1em; }
+        .key-display { background: #0a0a0f; border: 1px dashed #444; padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.9em; word-break: break-all; color: #00ff88; margin: 10px 0; }
+        .faq { margin: 10px 0; }
+        .faq dt { color: #00d4ff; cursor: pointer; padding: 10px; background: #1a1a2e; border-radius: 6px; margin: 5px 0; }
+        .faq dd { padding: 10px 10px 15px; color: #aaa; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🛒 Place Your Order</h1>
+    <p>Choose your license and complete payment. License key delivered within 2 hours.</p>
+
+    <div class="card">
+        <h2>📊 Twenty CRM MCP Server</h2>
+        <div class="price"><span class="old-price">$79</span> $49</div>
+        <p style="color:#aaa;margin:10px 0;">Commercial license — 1 developer, unlimited deployments</p>
+        <p>✓ 8 MCP tools for Twenty CRM<br>✓ Priority email support<br>✓ License key delivered instantly</p>
+        <div style="margin-top:20px;">
+            <a href="https://github.com/nandini-vk-w/twenty-mcp-server" class="btn">GitHub (Free)</a>
+            <a href="#payment" class="btn btn-green">Buy $49</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🛡️ Sentinel-RS EDR Agent</h2>
+        <div class="price"><span class="old-price">$49</span> $29</div>
+        <p style="color:#aaa;margin:10px 0;">Commercial license — per server</p>
+        <p>✓ Process/Network/FIM monitoring<br>✓ Real-time alerts (JSON)<br>✓ License key delivered instantly</p>
+        <div style="margin-top:20px;">
+            <a href="https://github.com/nandini-vk-w/sentinel-rs" class="btn">GitHub (Free)</a>
+            <a href="#payment" class="btn btn-green">Buy $29</a>
+        </div>
+    </div>
+
+    <div class="card" style="border-color: #ffd700;">
+        <h2>🎯 DevSecOps Bundle</h2>
+        <div class="price"><span class="old-price">$78</span> $69</div>
+        <p style="color:#aaa;margin:10px 0;">Both tools — save $9!</p>
+        <p>✓ Twenty MCP Server (Commercial) + Sentinel-RS (5-server license)<br>✓ Priority support for both<br>✓ Best value</p>
+        <div style="margin-top:20px;">
+            <a href="#payment" class="btn btn-green" style="font-size:1.2em;padding:16px 36px;">🚀 Buy Bundle $69</a>
+        </div>
+    </div>
+
+    <h2 id="payment">💳 Payment Methods</h2>
+
+    <div class="step">
+        <h3>🇮🇳 UPI (Instant — India Only)</h3>
+        <div class="key-display">7852034945@paytm</div>
+        <p>Scan & pay via any UPI app (Google Pay, PhonePe, Paytm).</p>
+        <p style="font-size:0.85em;color:#888;">After payment: email transaction ID + product name to <strong>vikas@durbhasigurukulam.com</strong></p>
+    </div>
+
+    <div class="step">
+        <h3>🏦 Bank Transfer (India/International)</h3>
+        <div class="bank-details">
+            <div><span class="label">Account Name:</span> <span class="value">[Your Name]</span></div>
+            <div><span class="label">Account No:</span> <span class="value">7626002100006961</span></div>
+            <div><span class="label">IFSC:</span> <span class="value">PUNB0762600</span></div>
+            <div><span class="label">Bank:</span> <span class="value">Punjab National Bank</span></div>
+            <div><span class="label">Branch:</span> <span class="value">Jodhpur, Pal Road</span></div>
+        </div>
+        <p style="font-size:0.85em;color:#888;">After transfer: email receipt + product name to <strong>vikas@durbhasigurukulam.com</strong></p>
+    </div>
+
+    <div class="step">
+        <h3>🌍 International — Wise / Crypto</h3>
+        <p>Contact <strong>vikas@durbhasigurukulam.com</strong> for Wise transfer or crypto payment (USDT/BTC).</p>
+    </div>
+
+    <h2 style="margin-top:40px;">❓ FAQ</h2>
+    <dl class="faq">
+        <dt>🔑 How do I get my license key?</dt>
+        <dd>After payment confirmation, email your transaction ID to vikas@durbhasigurukulam.com. License key delivered within 2 hours (usually instantly).</dd>
+        <dt>🔄 Can I upgrade from single product to bundle?</dt>
+        <dd>Yes! Pay the difference ($20 for bundle upgrade) and get the bundle license.</dd>
+        <dt>💻 Is there a free version?</dt>
+        <dd>Yes! Both products are MIT licensed for personal/educational use. Commercial use requires a license.</dd>
+        <dt>🔒 How are licenses validated?</dt>
+        <dd>Licenses are validated via our license server API. Offline validation also supported — licenses are HMAC-signed.</dd>
+    </dl>
+
+    <p style="text-align:center;color:#666;margin-top:40px;">
+        Questions? Email <strong>vikas@durbhasigurukulam.com</strong>
+    </p>
+</div>
+</body>
+</html>
